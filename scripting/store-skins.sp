@@ -101,7 +101,6 @@ public OnGetPlayerSkin(ids[], count, any:serial)
 		new bool:teamAllowed = false;
 		for (new teamIndex = 0; teamIndex < 5; teamIndex++)
 		{
-			PrintToChat(client, "%s %d == %d", itemName, g_skins[skin][SkinTeams][teamIndex], team);
 			if (g_skins[skin][SkinTeams][teamIndex] == team)
 			{
 				teamAllowed = true;

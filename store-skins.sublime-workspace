@@ -43,7 +43,15 @@
 			"file": "scripting/store-skins.sp",
 			"settings":
 			{
-				"buffer_size": 3880,
+				"buffer_size": 3788,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "configs/store/sql-init-scripts/skins.sql",
+			"settings":
+			{
+				"buffer_size": 158,
 				"line_ending": "Windows"
 			}
 		}
@@ -156,6 +164,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"printtochat",
 			"EquipmentModelPath",
 			"g_skinsCount",
 			"g_equipment",
@@ -282,8 +291,7 @@
 			"json_array_get_float",
 			"position",
 			"g_SpriteModel",
-			"150",
-			"AddTrail"
+			"150"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -309,21 +317,47 @@
 					"file": "scripting/store-skins.sp",
 					"settings":
 					{
-						"buffer_size": 3880,
+						"buffer_size": 3788,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								279,
-								279
+								594,
+								594
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/SourcePawn/sourcepawn.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 224.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "configs/store/sql-init-scripts/skins.sql",
+					"settings":
+					{
+						"buffer_size": 158,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

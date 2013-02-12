@@ -23,7 +23,7 @@ public Plugin:myinfo =
     name        = "[Store] Skins",
     author      = "alongub",
     description = "Skins component for [Store]",
-    version     = STORE_VERSION,
+    version     = "1.0.8-alpha",
     url         = "https://github.com/alongubkin/store"
 };
 
@@ -34,6 +34,21 @@ public OnPluginStart()
 {
 	HookEvent("player_spawn", Event_PlayerSpawn);
 	Store_RegisterItemType("skin", OnEquip, LoadItem);
+}
+
+/**
+ * Map is starting
+ */
+public OnMapStart()
+{
+	for (new skin = 0; skin < g_skinCount; skin++)
+	{
+		if (strcmp(g_skins[skin][SkinModelPath], "") != 0 && (FileExists(g_skins[skin][SkinModelPath]) || FileExists(g_skins[skin][SkinModelPath], true)))
+		{
+			PrecacheModel(g_skins[skin][SkinModelPath]);
+			Downloader_AddFileToDownloadsTable(g_skins[skin][SkinModelPath]);
+		}
+	}
 }
 
 /** 
@@ -128,7 +143,7 @@ public Store_OnReloadItems()
 }
 
 public LoadItem(const String:itemName[], const String:attrs[])
-{	
+{
 	strcopy(g_skins[g_skinCount][SkinName], STORE_MAX_NAME_LENGTH, itemName);
 
 	SetTrieValue(g_skinNameIndex, g_skins[g_skinCount][SkinName], g_skinCount);

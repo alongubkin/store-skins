@@ -18,6 +18,8 @@ new g_skinCount = 0;
 
 new Handle:g_skinNameIndex;
 
+new String:g_game[32];
+
 public Plugin:myinfo =
 {
     name        = "[Store] Skins",
@@ -34,6 +36,7 @@ public OnPluginStart()
 {
 	HookEvent("player_spawn", Event_PlayerSpawn);
 	Store_RegisterItemType("skin", OnEquip, LoadItem);
+	GetGameFolderName(g_game, sizeof(g_game));
 }
 
 /**
@@ -129,7 +132,16 @@ public OnGetPlayerSkin(ids[], count, any:serial)
 			continue;
 		}
 
-		SetEntityModel(client, g_skins[skin][SkinModelPath]);
+		if (StrEqual(g_game, "tf"))
+		{
+			SetVariantString(g_skins[skin][SkinModelPath]);
+			AcceptEntityInput(client, "SetCustomModel");
+			SetEntProp(client, Prop_Send, "m_bUseClassAnimations", 1);
+		}
+		else
+		{
+			SetEntityModel(client, g_skins[skin][SkinModelPath]);
+		}
 	}
 }
 

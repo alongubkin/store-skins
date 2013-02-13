@@ -43,8 +43,16 @@
 			"file": "scripting/store-skins.sp",
 			"settings":
 			{
-				"buffer_size": 3788,
+				"buffer_size": 4167,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Alon/Dropbox/HL2.co.il/zr-dev/src/hidehud.sp",
+			"settings":
+			{
+				"buffer_size": 1587,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -309,7 +317,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -317,15 +325,15 @@
 					"file": "scripting/store-skins.sp",
 					"settings":
 					{
-						"buffer_size": 3788,
+						"buffer_size": 4167,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								446
+								477,
+								477
 							]
 						],
 						"settings":
@@ -334,13 +342,40 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 224.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "/C/Users/Alon/Dropbox/HL2.co.il/zr-dev/src/hidehud.sp",
+					"settings":
+					{
+						"buffer_size": 1587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1587,
+								1332
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SourcePawn/sourcepawn.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "configs/store/sql-init-scripts/skins.sql",
 					"settings":
 					{

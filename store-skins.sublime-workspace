@@ -43,23 +43,7 @@
 			"file": "scripting/store-skins.sp",
 			"settings":
 			{
-				"buffer_size": 4167,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Alon/Dropbox/HL2.co.il/zr-dev/src/hidehud.sp",
-			"settings":
-			{
-				"buffer_size": 1587,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "configs/store/sql-init-scripts/skins.sql",
-			"settings":
-			{
-				"buffer_size": 158,
+				"buffer_size": 4450,
 				"line_ending": "Windows"
 			}
 		}
@@ -92,6 +76,12 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Alon/Dropbox/HL2.co.il/zr-dev/src/hidehud.sp",
+		"/C/Users/Alon/Downloads/TF2_ModelManager.sp",
+		"/C/Users/Alon/Downloads/TF2_ModelManager (1).sp",
+		"/C/Users/Alon/AppData/Local/Temp/7zO9F7D.tmp/freak_fortress_2.sp",
+		"/C/Users/Alon/AppData/Local/Temp/7zOEDEC.tmp/deadrun.sp",
+		"/C/Users/Alon/Documents/GitHub/store-skins/configs/store/sql-init-scripts/skins.sql",
 		"/C/Users/Alon/Documents/GitHub/store/scripting/store-trails.sp",
 		"/C/Users/Alon/Documents/GitHub/store/scripting/store-equipment.sp",
 		"/C/Users/Alon/Documents/GitHub/store/scripting/store-skins.sp",
@@ -172,6 +162,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"MakeModelTimer",
+			"MOdel",
+			"SetEntProp",
+			"m_iWorldModelIndex",
+			"AcceptEntityInput",
+			"Cmd_Menu",
+			"tf_models",
+			"model",
 			"printtochat",
 			"EquipmentModelPath",
 			"g_skinsCount",
@@ -291,15 +289,7 @@
 			"json_typeof",
 			"json_is_string",
 			"Handle:json_object_get(",
-			"stock json_object_get(",
-			"json_object_get(",
-			"json_object_get",
-			"json_object_get_string",
-			"json_object_get_float",
-			"json_array_get_float",
-			"position",
-			"g_SpriteModel",
-			"150"
+			"stock json_object_get("
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -317,7 +307,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -325,15 +315,15 @@
 					"file": "scripting/store-skins.sp",
 					"settings":
 					{
-						"buffer_size": 4167,
+						"buffer_size": 4450,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								477,
-								477
+								2884,
+								2884
 							]
 						],
 						"settings":
@@ -342,60 +332,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/Alon/Dropbox/HL2.co.il/zr-dev/src/hidehud.sp",
-					"settings":
-					{
-						"buffer_size": 1587,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1587,
-								1332
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SourcePawn/sourcepawn.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 495.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "configs/store/sql-init-scripts/skins.sql",
-					"settings":
-					{
-						"buffer_size": 158,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								158,
-								158
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQL/SQL.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1692.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

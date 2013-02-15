@@ -34,6 +34,8 @@ public Plugin:myinfo =
  */
 public OnPluginStart()
 {
+	LoadTranslations("store.phrases");
+	
 	HookEvent("player_spawn", Event_PlayerSpawn);
 	Store_RegisterItemType("skin", OnEquip, LoadItem);
 	GetGameFolderName(g_game, sizeof(g_game));
@@ -184,6 +186,6 @@ public Store_ItemUseAction:OnEquip(client, itemId, bool:equipped)
 	if (equipped)
 		return Store_UnequipItem;
 	
-	PrintToChat(client, "%sYou've equipped a skin. It will take effect in the next round.", STORE_PREFIX);
+	PrintToChat(client, "%s%t", STORE_PREFIX, "Equipped item apply next spawn");
 	return Store_EquipItem;
 }

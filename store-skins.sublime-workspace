@@ -43,7 +43,7 @@
 			"file": "scripting/store-skins.sp",
 			"settings":
 			{
-				"buffer_size": 4450,
+				"buffer_size": 4462,
 				"line_ending": "Windows"
 			}
 		}
@@ -315,15 +315,15 @@
 					"file": "scripting/store-skins.sp",
 					"settings":
 					{
-						"buffer_size": 4450,
+						"buffer_size": 4462,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2884,
-								2884
+								656,
+								656
 							]
 						],
 						"settings":
@@ -332,7 +332,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1692.0,
+						"translation.y": 307.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

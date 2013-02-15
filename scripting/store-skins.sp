@@ -70,6 +70,13 @@ public OnLibraryAdded(const String:name[])
 public Action:Event_PlayerSpawn(Handle:event, const String:name[], bool:dontBroadcast)
 {
 	new client = GetClientOfUserId(GetEventInt(event, "userid"));
+
+	if (!IsClientInGame(client))
+		return Plugin_Continue;
+
+	if (IsFakeClient(client))
+		return Plugin_Continue;
+
 	CreateTimer(1.0, Timer_Spawn, GetClientSerial(client));
 	
 	return Plugin_Continue;

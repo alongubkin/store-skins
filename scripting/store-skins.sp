@@ -25,7 +25,7 @@ public Plugin:myinfo =
     name        = "[Store] Skins",
     author      = "alongub",
     description = "Skins component for [Store]",
-    version     = "1.0.8-alpha",
+    version     = "1.1-alpha",
     url         = "https://github.com/alongubkin/store"
 };
 

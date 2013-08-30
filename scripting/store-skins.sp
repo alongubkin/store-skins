@@ -89,14 +89,14 @@ public Action:Timer_Spawn(Handle:timer, any:serial)
 	if (client == 0)
 		return Plugin_Continue;
 		
-	Store_GetEquippedItemsByType(Store_GetClientAccountID(client), "skin", Store_GetClientLoadout(client), OnGetPlayerSkin, serial);
+	Store_GetEquippedItemsByType(GetSteamAccountID(client), "skin", Store_GetClientLoadout(client), OnGetPlayerSkin, serial);
 	
 	return Plugin_Continue;
 }
 
 public Store_OnClientLoadoutChanged(client)
 {
-	Store_GetEquippedItemsByType(Store_GetClientAccountID(client), "skin", Store_GetClientLoadout(client), OnGetPlayerSkin, GetClientSerial(client));
+	Store_GetEquippedItemsByType(GetSteamAccountID(client), "skin", Store_GetClientLoadout(client), OnGetPlayerSkin, GetClientSerial(client));
 }
 
 public OnGetPlayerSkin(ids[], count, any:serial)

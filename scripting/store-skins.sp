@@ -138,6 +138,7 @@ public OnGetPlayerSkin(ids[], count, any:serial)
 
 		if (!teamAllowed)
 		{
+			PrintToChat(client, "%s%t", STORE_PREFIX, "You can't wear this item");
 			continue;
 		}
 

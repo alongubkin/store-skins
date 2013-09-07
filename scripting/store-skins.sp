@@ -3,7 +3,7 @@
 #include <sourcemod>
 #include <sdktools>
 #include <store>
-#include <smjansson>
+#include <EasyJSON>
 #include <smartdm>
 
 enum Skin
@@ -25,7 +25,7 @@ public Plugin:myinfo =
     name        = "[Store] Skins",
     author      = "alongub",
     description = "Skins component for [Store]",
-    version     = "1.1-alpha",
+    version     = STORE_VERSION,
     url         = "https://github.com/alongubkin/store"
 };
 
@@ -170,23 +170,25 @@ public LoadItem(const String:itemName[], const String:attrs[])
 
 	SetTrieValue(g_skinNameIndex, g_skins[g_skinCount][SkinName], g_skinCount);
 
-	new Handle:json = json_load(attrs);
-	json_object_get_string(json, "model", g_skins[g_skinCount][SkinModelPath], PLATFORM_MAX_PATH);
+	new Handle:json = DecodeJSON(attrs);
+	JSONGetString(json, "model", g_skins[g_skinCount][SkinModelPath], PLATFORM_MAX_PATH);
 
-	if (strcmp(g_skins[g_skinCount][SkinModelPath], "") != 0 && (FileExists(g_skins[g_skinCount][SkinModelPath]) || FileExists(g_skins[g_skinCount][SkinModelPath], true)))
+	if (strcmp(g_skins[g_skinCount][SkinModelPath], "") != 0 && 
+		(FileExists(g_skins[g_skinCount][SkinModelPath]) || FileExists(g_skins[g_skinCount][SkinModelPath], true)))
 	{
 		PrecacheModel(g_skins[g_skinCount][SkinModelPath]);
 		Downloader_AddFileToDownloadsTable(g_skins[g_skinCount][SkinModelPath]);
 	}
 
-	new Handle:teams = json_object_get(json, "teams");
-
-	for (new i = 0, size = json_array_size(teams); i < size; i++)
-		g_skins[g_skinCount][SkinTeams][i] = json_array_get_int(teams, i);
-
-	CloseHandle(json);
+	new Handle:teams = INVALID_HANDLE;
+	if (JSONGetArray(json, "teams", teams) && teams != INVALID_HANDLE)
+		for (new i = 0; i < GetArraySize(teams); i++)
+			if (!JSONGetArrayInteger(teams, i, g_skins[g_skinCount][SkinTeams][i]))
+				g_skins[g_skinCount][SkinTeams][i] = 0;
 
 	g_skinCount++;
+	
+	DestroyJSON(json);
 }
 
 public Store_ItemUseAction:OnEquip(client, itemId, bool:equipped)
